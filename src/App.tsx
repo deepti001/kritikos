@@ -6,12 +6,12 @@ const App: React.FC = () => {
   const handleClick = () => {
     console.log('Button clicked!');
   };
-  
+
   return (
     <div>
       <h1>Welcome to PS Pulse</h1>
       <Counter></Counter>
-      <Button onClick={handleClick}>Click Me</Button>
+       <Button onClick={handleClick}>Click Me</Button>
     </div>
   );
 };
