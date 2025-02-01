@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ps-pulse/static/css/main.208d4b54.css",
-    "main.js": "/ps-pulse/static/js/main.adb1f8f4.js",
-    "static/media/logoSymbol.png": "/ps-pulse/static/media/logoSymbol.3702f804d67987a928ea.png",
-    "static/media/logo.png": "/ps-pulse/static/media/logo.9aab626a3f5d139c6be6.png",
-    "index.html": "/ps-pulse/index.html",
-    "main.208d4b54.css.map": "/ps-pulse/static/css/main.208d4b54.css.map",
-    "main.adb1f8f4.js.map": "/ps-pulse/static/js/main.adb1f8f4.js.map"
+    "main.css": "/kritikos/static/css/main.208d4b54.css",
+    "main.js": "/kritikos/static/js/main.26a7ab08.js",
+    "static/media/logoSymbol.png": "/kritikos/static/media/logoSymbol.3702f804d67987a928ea.png",
+    "static/media/logo.png": "/kritikos/static/media/logo.9aab626a3f5d139c6be6.png",
+    "index.html": "/kritikos/index.html",
+    "main.208d4b54.css.map": "/kritikos/static/css/main.208d4b54.css.map",
+    "main.26a7ab08.js.map": "/kritikos/static/js/main.26a7ab08.js.map"
   },
   "entrypoints": [
     "static/css/main.208d4b54.css",
-    "static/js/main.adb1f8f4.js"
+    "static/js/main.26a7ab08.js"
   ]
 }
