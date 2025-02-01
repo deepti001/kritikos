@@ -1,16 +1,70 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
+
+
+const USERS = [
+  {
+    "id": 1,
+    "name": "Deepti Aggarwal",
+    "email": "deepti.aggarwal@aspire.com",
+    "username": "deepti01",
+    "password": "deepti01"
+  },
+  {
+    "id": 2,
+    "name": "Nirbhay Singh",
+    "email": "nirbhay.singh@aspire.com",
+    "username": "nirbhay01",
+    "password": "nirbhay01"
+  },
+  {
+    "id": 3,
+    "name": "Apoorva Srinivasan",
+    "email": "apoorva.rinivasan@aspire.com",
+    "username": "apoorva01",
+    "password": "apoorva01"
+  },
+  {
+    "id": 4,
+    "name": "Ashish Tyagi",
+    "email": "ashish.tyagi@aspire.com",
+    "username": "ashish01",
+    "password": "ashish01"
+  },
+  {
+    "id": 5,
+    "name": "Sajan S",
+    "email": "sajan.s@aspire.com",
+    "username": "sajan01",
+    "password": "sajan01"
+  },
+  {
+    "id": 6,
+    "name": "Admin",
+    "email": "admin@aspire.com",
+    "username": "admin",
+    "password": "admin"
+  }
+]
 
 const Login: React.FC = () => {
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const username = usernameRef.current?.value;
     const password = passwordRef.current?.value;
-    console.log('Username:', username);
-    console.log('Password:', password);
+
+    let userExist = USERS.filter(user => (user.username == username && user.password == password));
+
+    if (userExist) {
+      navigate('/dashboard', { state: { user: userExist[0] } });
+    } else {
+      console.log('Invalid credentials');
+    }
   };
   
   return (
@@ -168,7 +222,7 @@ const FormContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  opacity: 0.6;
+  color: #fe414dc4;
 `;
 
 const Input = styled.input`

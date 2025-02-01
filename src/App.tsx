@@ -1,30 +1,74 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import styled from "styled-components";
 import logo from "./assets/images/logo.png";
+
+
+// const App: React.FC = () => {
+//   return (
+//     <Router>
+//       <div>
+//       <HeaderCustom>
+//         <nav className="header__nav" aria-label="Main Navigation">
+//           <ul className="header__navlist">
+//             <li><Link to="/" aria-label="Navigate to Home Page"><img className="header__logo" src={logo} alt="PS-Pulse Logo"/></Link></li>
+//             <li><Link to="/login" aria-label="Navigate to Login Page" className={"header__link"}>Login</Link></li>
+//           </ul>
+//         </nav>
+//         </HeaderCustom>
+//         <main id="main-content">
+//           <Routes>
+//             <Route path="/" element={<Home />} />
+//             <Route path="/login" element={<Login />} />
+//             <Route path="/dashboard" element={<Dashboard />} />
+//           </Routes>
+//         </main>
+//       </div>
+//     </Router>
+//   );
+// };
 
 const App: React.FC = () => {
   return (
     <Router>
       <div>
-      <HeaderCustom>
-        <nav className="header__nav" aria-label="Main Navigation">
-          <ul className="header__navlist">
-            <li><Link to="/" aria-label="Navigate to Home Page"><img className="header__logo" src={logo} alt="PS-Pulse Logo"/></Link></li>
-            <li><Link to="/login" aria-label="Navigate to Login Page" className={"header__link"}>Login</Link></li>
-          </ul>
-        </nav>
-        </HeaderCustom>
+        <Header />
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
       </div>
     </Router>
+  );
+};
+
+const Header: React.FC = () => {
+  const location = useLocation();
+  const isDashboard = location.pathname === '/dashboard';
+
+  return (
+    <HeaderCustom className={isDashboard ? 'hidden' : ''}>
+      <nav className="header__nav" aria-label="Main Navigation">
+        <ul className="header__navlist">
+          <li>
+            <Link to="/" aria-label="Navigate to Home Page">
+              <img className="header__logo" src={logo} alt="PS-Pulse Logo" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" aria-label="Navigate to Login Page" className="header__link">
+              Login
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </HeaderCustom>
   );
 };
 
@@ -37,6 +81,10 @@ const HeaderCustom = styled.header`
   display: block;
   z-index: 2;
   background-color: transparent;
+
+  &.hidden {
+    display: none;
+  }
 
   .header__navlist {
     justify-content: space-between;
