@@ -60,10 +60,11 @@ const Login: React.FC = () => {
 
     let userExist = USERS.filter(user => (user.username === username && user.password === password));
 
-    if (userExist) {
+    if (userExist && userExist.length) {
       navigate('/dashboard', { state: { user: userExist[0] } });
     } else {
       console.log('Invalid credentials');
+      alert('Invalid credentials');
     }
   };
   
