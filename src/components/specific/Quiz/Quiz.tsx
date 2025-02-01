@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 
-// Define the type for the quiz options
 interface QuizOption {
   id: number;
   label: string;
