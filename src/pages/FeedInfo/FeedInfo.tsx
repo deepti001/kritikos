@@ -171,6 +171,7 @@ const FeedInfo: React.FC = () => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(data),
+          mode: 'no-cors'
         });
 
         console.log('response.ok', response.ok, response);
@@ -184,7 +185,7 @@ const FeedInfo: React.FC = () => {
           const message = messages[messages.length - 1];
           const content = message.content || "";
 
-          setPromptQueryResponse(message.content);
+          setPromptQueryResponse(content);
 
         }
       } catch (error) {

@@ -40,6 +40,7 @@ const Quiz: React.FC = () => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(data),
+          mode: 'no-cors'
         });
 
         console.log('response.ok', response.ok, response);

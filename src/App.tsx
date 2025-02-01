@@ -7,31 +7,6 @@ import FeedInfo from "./pages/FeedInfo/FeedInfo";
 import styled from "styled-components";
 import logo from "./assets/images/logo.png";
 
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <div>
-//       <HeaderCustom>
-//         <nav className="header__nav" aria-label="Main Navigation">
-//           <ul className="header__navlist">
-//             <li><Link to="/" aria-label="Navigate to Home Page"><img className="header__logo" src={logo} alt="PS-Pulse Logo"/></Link></li>
-//             <li><Link to="/login" aria-label="Navigate to Login Page" className={"header__link"}>Login</Link></li>
-//           </ul>
-//         </nav>
-//         </HeaderCustom>
-//         <main id="main-content">
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/login" element={<Login />} />
-//             <Route path="/dashboard" element={<Dashboard />} />
-//           </Routes>
-//         </main>
-//       </div>
-//     </Router>
-//   );
-// };
-
 const App: React.FC = () => {
   return (
     <Router>
@@ -40,6 +15,7 @@ const App: React.FC = () => {
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/kritikos" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/feedinfo" element={<FeedInfo />} />
