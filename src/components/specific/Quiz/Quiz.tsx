@@ -21,7 +21,7 @@ const Quiz: React.FC = () => {
 
 
   useEffect(() => {
-    const url = '/pschat/chat';
+    const url = 'https://api.psnext.info/api/chat';
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJpZCI6OTY2NCwicm9sZXMiOlsiZGVmYXVsdCJdLCJwYXRpZCI6ImZjZDM1NGIyLWQ0N2YtNDk5Ni1iYjVjLTZkNjkyZWI3Zjk0ZiJ9LCJpYXQiOjE3Mzg0MzU2MDgsImV4cCI6MTc0MTAyNzYwOH0.4fD8jv_5bodoIpRSgiw99rhx5fRtE9ACQgizRStnpUs';
     // const token = 'testing';
 
