@@ -21,8 +21,9 @@ const Quiz: React.FC = () => {
 
 
   useEffect(() => {
-    const url = '/api';
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJpZCI6MTAxNjgsInJvbGVzIjpbImRlZmF1bHQiXSwicGF0aWQiOiI2N2ExNDBkYy1iM2I4LTQzNmMtOWM1OC00MmI3ZGNjNzYxYzgifSwiaWF0IjoxNzM4NDAyNjQ1LCJleHAiOjE3NDYxNzg2NDV9.Zk-VTlULaif5w_Vxrm3hUrWr9r9fBJ9dC1bKZucVojI';
+    const url = '/pschat/chat';
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJpZCI6OTY2NCwicm9sZXMiOlsiZGVmYXVsdCJdLCJwYXRpZCI6ImZjZDM1NGIyLWQ0N2YtNDk5Ni1iYjVjLTZkNjkyZWI3Zjk0ZiJ9LCJpYXQiOjE3Mzg0MzU2MDgsImV4cCI6MTc0MTAyNzYwOH0.4fD8jv_5bodoIpRSgiw99rhx5fRtE9ACQgizRStnpUs';
+    // const token = 'testing';
 
     const data = {
       "message": "Think as a Quiz master and ask one question related to Artificial Intelligence. Give the output in json format containing fields like Question, options which will have label and id,  answer consist of option id. Do not add any other description as the output will be used in software.",

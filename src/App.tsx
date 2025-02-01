@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import FeedInfo from "./pages/FeedInfo/FeedInfo";
 import styled from "styled-components";
 import logo from "./assets/images/logo.png";
 
@@ -41,6 +42,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/feedinfo" element={<FeedInfo />} />
           </Routes>
         </main>
       </div>
@@ -50,7 +52,7 @@ const App: React.FC = () => {
 
 const Header: React.FC = () => {
   const location = useLocation();
-  const isDashboard = location.pathname === '/dashboard';
+  const isDashboard = location.pathname === '/dashboard' || location.pathname === '/feedinfo';
 
   return (
     <HeaderCustom className={isDashboard ? 'hidden' : ''}>
