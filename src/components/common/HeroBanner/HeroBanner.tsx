@@ -7,9 +7,9 @@ const HeroBanner: React.FC = () => {
       <div className="hero-banner__inner">
         <span>
           <h1>hero section with button</h1>
-          <a href="#" className="btn btn-light" role="button" aria-label="Explore Now">
+          <button className="btn btn-light" role="button" aria-label="Explore Now">
             Explore Now
-          </a>
+          </button>
         </span>
       </div>
     </HeroSection>
