@@ -41,7 +41,6 @@ const DetailedFeed: React.FC<DetailedFeedProps> = ({newPost}) => {
 const FeedInfo: React.FC = () => {
   const location = useLocation();
   const user = location.state?.selectedPostItem; 
-  const post = location.state?.userNew; 
   const [newUser, setNewUser] = useState(user);
   const [newPost, setNewPost] = useState(user);
   const inputRef = useRef<HTMLInputElement>(null);
