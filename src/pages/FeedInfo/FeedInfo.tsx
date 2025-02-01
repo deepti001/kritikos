@@ -110,32 +110,45 @@ const FeedInfo: React.FC = () => {
 
   const createPromptQuery = () => {
 
-    let initial_str = `With the following Information, name: ${'Dwight schruti'}, role: ${'Assitent to regionalManager'} Knows: '`;
-
+    let initial_str = `With the following Information, name: ${'Dwight schruti'}, role: ${'Assitent to regionalManager'} Knows: 'technology', '`;
     for(let key in activeButtons) {
       if(activeButtons[key]) {
         initial_str += key + "', "
       }
     }
 
-    initial_str += " is '"
+    let flag = false;
     for(let key in capabilityButtons) {
       if(capabilityButtons[key]) {
+        if(!flag) {
+          initial_str += "and is '";
+        }
+        flag = true;
         initial_str += key + "' and"
       }
     }
 
-    initial_str += " can '"
+    let flag2 = false;
     for(let key in challengesButtons) {
       if(challengesButtons[key]) {
+        if(!flag && !flag2) {
+          initial_str += "and ";
+        }
+        if(!flag2) {
+          initial_str += " can '";
+        }
+        flag2 = true;
         initial_str += key + "' and"
       }
     }
 
-    initial_str += " and with the knowledge and skills of '"
-    for(let key in extraCapabilityButtons) {
-      if(extraCapabilityButtons[key]) {
-        initial_str += key + "' and"
+    let flag3 = false;
+    if(Object.keys(extraCapabilityButtons).length >= 2) {
+      initial_str += " and with the knowledge and skills of '"
+      for(let key in extraCapabilityButtons) {
+        if(extraCapabilityButtons[key]) {
+          initial_str += key + "' and"
+        }
       }
     }
 
@@ -189,7 +202,8 @@ const FeedInfo: React.FC = () => {
 
         }
       } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+        console.error('There was a problem with the fetch operation for prompt( token/Networl/Other issue). So dummy Data would be shown', error);
+        setPromptQueryResponse("Dwight Schrute, as the Assistant to the Regional Manager, excels with his profound knowledge of technology and JavaScript. His punctuality and ability to engage with openness foster a collaborative environment, driving our team's success and innovation. His contributions are invaluable.");
       }
     };
 

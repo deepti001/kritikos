@@ -52,36 +52,38 @@ const Quiz: React.FC = () => {
         const messages = responseData?.data?.messages || [];
         if (messages.length > 0) {
           const message = messages[messages.length - 1];
-          const messageContentJson = JSON.parse(message.content);
-
+          let messageContentJson = JSON.parse(message.content);
           console.log("messageContentJson",messageContentJson);
 
           // todo-lator: required for testing this const statement and uncomment rest of the line
-          // const messageContentJson = {
-          //   "Question": "Who is considered as the father of Artificial Intelligence?",
-          //   "Options": [
-          //       {
-          //           "id": 1,
-          //           "label": "John McCarthy"
-          //       },
-          //       {
-          //           "id": 2,
-          //           "label": "Elon Musk"
-          //       },
-          //       {
-          //           "id": 3,
-          //           "label": "Bill Gates"
-          //       },
-          //       {
-          //           "id": 4,
-          //           "label": "Steve Jobs"
-          //       }
-          //   ],
-          //   "Answer": {
-          //       "id": 1,
-          //       "label": "John McCarthy"
-          //   }
-          // }
+          if(! messageContentJson) {
+            // Dummy Data
+            messageContentJson = {
+              "Question": "Who is considered as the father of Artificial Intelligence?",
+              "Options": [
+                {
+                  "id": 1,
+                  "label": "John McCarthy"
+                },
+                {
+                  "id": 2,
+                  "label": "Elon Musk"
+                },
+                {
+                  "id": 3,
+                  "label": "Bill Gates"
+                },
+                {
+                  "id": 4,
+                  "label": "Steve Jobs"
+                }
+              ],
+              "Answer": {
+                "id": 1,
+                "label": "John McCarthy"
+              }
+            }
+          }
 
           setQuestion(messageContentJson.Question || "");
           setOptions(messageContentJson.Options);
@@ -89,7 +91,37 @@ const Quiz: React.FC = () => {
 
         }
       } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+        console.error('There was a problem with the fetch operation for the QUIZ due to token expiary/network, So dummy data is shown on screen', error);
+        const messageContentJson = {
+          "Question": "Who is considered as the father of Artificial Intelligence?",
+          "Options": [
+            {
+              "id": 1,
+              "label": "John McCarthy"
+            },
+            {
+              "id": 2,
+              "label": "Elon Musk"
+            },
+            {
+              "id": 3,
+              "label": "Bill Gates"
+            },
+              {
+                "id": 4,
+                "label": "Steve Jobs"
+            }
+          ],
+          "Answer": {
+            "id": 1,
+            "label": "John McCarthy"
+          }
+        }
+
+        setQuestion(messageContentJson.Question || "");
+        setOptions(messageContentJson.Options);
+        setAnswer(messageContentJson.Answer);
+
       }
     };
 

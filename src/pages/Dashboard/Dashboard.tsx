@@ -22,7 +22,7 @@ const Dashboard: React.FC = () => {
           <UserInfo />
         </div>
         <FeedQuiz className="grid grid-cols-3 gap-8 mb-8">
-        <Quiz />
+          <Quiz />
           <Feed user={newUser}/>
         </FeedQuiz>
         <div className="grid grid-cols-2 gap-8">
