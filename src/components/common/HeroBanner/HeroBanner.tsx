@@ -6,9 +6,9 @@ const HeroBanner: React.FC = () => {
     <HeroSection className="light hero" role="banner">
       <div className="hero-banner__inner">
         <span>
-          <h1>hero section with button</h1>
+          <h1>PS Pulse - Kritikos</h1>
           <button className="btn btn-light" role="button" aria-label="Explore Now">
-            Explore Now
+            Explore
           </button>
         </span>
       </div>
@@ -34,7 +34,7 @@ const HeroSection = styled.section`
   }
 
   background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent),
-      url(https://images.pexels.com/photos/133325/pexels-photo-133325.jpeg?auto=compress&cs=tinysrgb&w=800&h=750&dpr=1);
+      url(https://images.pexels.com/photos/133325/pexels-photo-133325.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1);
   background-position: center, bottom left;
   background-size: cover, cover;
   align-items: flex-start;
@@ -44,12 +44,10 @@ const HeroSection = styled.section`
   
   @media (min-width: 577px) {
     background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem),
-      url(https://images.pexels.com/photos/133325/pexels-photo-133325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=600&dpr=1);
+      url(https://images.pexels.com/photos/133325/pexels-photo-133325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=900&dpr=1);
     background-position: center, bottom left;
     background-size: cover, cover;
-    height: fit-content;
-    padding: 15rem 3rem 6rem;
-    max-height: 45rem;
+    padding: 20rem 3rem 6rem;
   }
 `;
 

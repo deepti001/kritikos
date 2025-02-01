@@ -32,7 +32,7 @@ const UserHeader: React.FC<HeaderProps> = ({user}) => {
         <div className="relative">
           <button
             onClick={toggleDropdown}
-            className="bg-white border-none text-black py-3 b-0 inline-flex items-center"
+            className="bg-white border text-black py-2 px-2 b-0 inline-flex items-center"
           >
             <span>Working from Gurgaon Office</span>
             <i className="ml-2 fas fa-chevron-down"></i>
