@@ -9,8 +9,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div>
-      <UserHeader />
-      {user && <h2>Welcome, {user.name}!</h2>}
+      <UserHeader user={user}/>
 
     </div>
   );

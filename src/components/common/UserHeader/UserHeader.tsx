@@ -2,7 +2,19 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import logoSymbol from "../../../assets/images/logoSymbol.png";
 
-const UserHeader = () => {
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  username: string;
+  password: string;
+}
+
+interface HeaderProps {
+  user: User;
+}
+
+const UserHeader: React.FC<HeaderProps> = ({user}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
