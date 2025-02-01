@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "types": ["jest"] 
   },
-  "include": ["src"]
+  "include": ["src", "src/images.d.ts" ]
 }
