@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kritikos/static/css/main.208d4b54.css",
-    "main.js": "/kritikos/static/js/main.a2188e78.js",
+    "main.js": "/kritikos/static/js/main.583080e9.js",
     "static/media/logoSymbol.png": "/kritikos/static/media/logoSymbol.3702f804d67987a928ea.png",
     "static/media/logo.png": "/kritikos/static/media/logo.9aab626a3f5d139c6be6.png",
     "index.html": "/kritikos/index.html",
     "main.208d4b54.css.map": "/kritikos/static/css/main.208d4b54.css.map",
-    "main.a2188e78.js.map": "/kritikos/static/js/main.a2188e78.js.map"
+    "main.583080e9.js.map": "/kritikos/static/js/main.583080e9.js.map"
   },
   "entrypoints": [
     "static/css/main.208d4b54.css",
-    "static/js/main.a2188e78.js"
+    "static/js/main.583080e9.js"
   ]
 }
