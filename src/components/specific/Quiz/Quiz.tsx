@@ -26,7 +26,7 @@ const Quiz: React.FC = () => {
     // const token = 'testing';
 
     const data = {
-      "message": "Think as a Quiz master and ask one question related to Artificial Intelligence. Give the output in json format containing fields like Question, options which will have label and id,  answer consist of option id. Do not add any other description as the output will be used in software.",
+      "message": "Think as a Quiz master and ask one question related to Artificial Intelligence. Give the output in json format containing fields like Question, Options which will have label and id,  Answer consist of an object with  id as key with value having id of the correct option and label as key with value as the label of the correct option. Do not add any other description as the output will be used in software. Also use the key name same as which is mentioned.",
       "options": {
         "model": "gpt4"
       }
