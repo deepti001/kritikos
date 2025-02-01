@@ -58,7 +58,7 @@ const Login: React.FC = () => {
     const username = usernameRef.current?.value;
     const password = passwordRef.current?.value;
 
-    let userExist = USERS.filter(user => (user.username == username && user.password == password));
+    let userExist = USERS.filter(user => (user.username === username && user.password === password));
 
     if (userExist) {
       navigate('/dashboard', { state: { user: userExist[0] } });
