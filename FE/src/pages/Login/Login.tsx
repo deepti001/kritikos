@@ -110,6 +110,7 @@ const Login: React.FC = () => {
                 placeholder="USERNAME"
                 className="login__form-input"
                 ref={usernameRef}
+                defaultValue="admin"
                 required
               />
 
@@ -120,6 +121,7 @@ const Login: React.FC = () => {
                 placeholder="PASSWORD"
                 className="login__form-input"
                 ref={passwordRef}
+                defaultValue="admin"
                 required
               />
               <Button type="submit">SUBMIT</Button>
