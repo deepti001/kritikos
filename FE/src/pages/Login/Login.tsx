@@ -9,43 +9,65 @@ const USERS = [
     "name": "Deepti Aggarwal",
     "email": "deepti.aggarwal@aspire.com",
     "username": "deepti01",
-    "password": "deepti01"
+    "password": "deepti01",
+    "role": "Sr. Developer"
   },
   {
     "id": 2,
     "name": "Nirbhay Singh",
     "email": "nirbhay.singh@aspire.com",
     "username": "nirbhay01",
-    "password": "nirbhay01"
+    "password": "nirbhay01",
+    "role": "Sr. Developer"
   },
   {
     "id": 3,
     "name": "Apoorva Srinivasan",
     "email": "apoorva.rinivasan@aspire.com",
     "username": "apoorva01",
-    "password": "apoorva01"
+    "password": "apoorva01",
+    "role": "Sr. Developer"
   },
   {
     "id": 4,
     "name": "Ashish Tyagi",
     "email": "ashish.tyagi@aspire.com",
     "username": "ashish01",
-    "password": "ashish01"
+    "password": "ashish01",
+    "role": "Product Manager"
   },
   {
     "id": 5,
     "name": "Sajan S",
     "email": "sajan.s@aspire.com",
     "username": "sajan01",
-    "password": "sajan01"
+    "password": "sajan01",
+    "role": "intern"
   },
   {
     "id": 6,
     "name": "Admin",
     "email": "admin@aspire.com",
     "username": "admin",
-    "password": "admin"
-  }
+    "password": "admin",
+    "role": "admin"
+  },
+  {
+    "id": 7,
+    "name": "Dwight Shrute",
+    "email": "dwight@aspire.com",
+    "username": "dwight01",
+    "password": "shruteDw01",
+    "role": "Assistant to the regional Manager"
+  },
+  {
+    "id": 8,
+    "name": "Erin hanon",
+    "email": "erin@aspire.com",
+    "username": "erin01",
+    "password": "hanon01Erin",
+    "role": "intern"
+  },
 ]
 
 const Login: React.FC = () => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import logoSymbol from "../../../assets/images/logoSymbol.png";
+import { useLocation } from 'react-router-dom';
 
 interface User {
   id: number;
@@ -8,6 +9,7 @@ interface User {
   email: string;
   username: string;
   password: string;
+  role: String;
 }
 
 interface HeaderProps {
@@ -16,13 +18,20 @@ interface HeaderProps {
 
 const UserHeader: React.FC<HeaderProps> = ({user}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const location = useLocation();
+
+  
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+
+
+  const isDashboard = location.pathname === '/dashboard';
+
   return (
-    <HeaderCustom className="bg-white shadow-md flex justify-between items-center">
+    <HeaderCustom className={'bg-white shadow-md flex justify-between items-center ' + (isDashboard ? 'mx-6' : '')}>
       <div className="flex items-center pl-4">
         <Logo className="mr-2" src={logoSymbol} alt="PS-Pulse Logo"/>
         <h1 className="text-xl font-bold">pulse</h1>
